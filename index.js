@@ -4,6 +4,8 @@ let num2 = 0
 let num1El = document.getElementById("num1-el")
 let num2El = document.getElementById("num2-el")
 
+console.log("called")
+
 function colorCode() {
     if (num1 > num2) {
         num1El.classList.add("colorchange")
@@ -20,10 +22,10 @@ function colorCode() {
 }
 
 function addone() {
+    console.log("clicked")
     num1 = num1 + 1
     num1El.innerText = num1
-    colorCode()
-    
+    colorCode() 
 }
  
 function addtwo() {
@@ -63,3 +65,8 @@ function addthree2() {
     num2El.innerText = num2
     colorCode()
    }
+
+
+   const addOneEl = document.getElementById("add-one")
+   addOneEl.addEventListener("click", addone)
+   
